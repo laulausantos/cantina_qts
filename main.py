@@ -1,6 +1,13 @@
-def main():
-    print("Hello from cantina-qts!")
+def calcular_total(quantidade, valor_unitario):
+    return quantidade * valor_unitario
 
+resultado = calcular_total(10,2)
+print(resultado)
 
-if __name__ == "__main__":
-    main()
+def validar_pedido(item, quantidade, valor_unitario):
+    if item and quantidade > 0 and valor_unitario > 0:
+        return "Pedido válido"
+    else:
+        return "Pedido inválido"
+
+print(validar_pedido("",2,0))
